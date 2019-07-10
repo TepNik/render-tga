@@ -16,7 +16,6 @@ template <class t> struct ver2
     ver2<t> operator+(const ver2<t>& sec) {return ver2<t>(x + sec.x, y + sec.y);}
     ver2<t> operator-(const ver2<t>& sec) {return ver2<t>(x - sec.x, y - sec.y);}
     ver2<t> operator*(float f) {return ver2<t>(x * f, y * f);}
-    template <class> friend operator*(float f, const ver2<t>& v) {return ver2<t>(f * v.x, f * v.y);}
     template <class> friend std::ostream& operator<<(std::ostream& stream, const ver2<t> &ver)
     {
         stream << "(" << ver.x << ", " << ver.y << ")\n";
